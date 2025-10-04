@@ -1,11 +1,9 @@
-# CODESOFT
-
 import os
 
-TODO_FILE="todo.text"
+TODO_FILE = "todo.txt"
 
-def load_task():
- if not os.path.isfile(TODO_FILE):
+def load_tasks():
+    if not os.path.isfile(TODO_FILE):
         return []
     with open(TODO_FILE, "r") as f:
         tasks = [line.strip() for line in f.readlines() if line.strip()]
